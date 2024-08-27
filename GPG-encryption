@@ -1,0 +1,41 @@
+# Encryption and Decryption Assessment using GPG
+# An Instance of using GPG to encrypt a file before transmission and decrypting the same by the recipient.
+
+GPG – Gnu Private Guard
+Used for encryption (symmetric and asymmetric)
+Uses the concept of asymmetric encryption
+
+# Installing GPG
+
+# For Ubuntu/any Debian based distributions
+>sudo apt install gnupg
+
+# For CentOS/ RHEL based distributions
+>sudo yum install gnupg
+
+# Verify GPG Installation
+>gpg --version
+
+# Generate a new key with default config
+> gpg –-generate-key
+
+# Generate a new key with your own config
+> gpg –-full-generate-key
+
+# List all GPG keys
+> gpg –-list-keys
+
+# List all GPG private keypairs
+> gpg –-list-secret-keys
+
+# Export a public key in txt file format
+> gpg –-armor –-export –-output filename.txt email-id
+
+# Encrypt a file/document (in a folder with public key)
+> gpg --output encrypted-file.gpg --encrypt --recipient email-id unencrypted-file.pdf
+
+# Decrypt the file/document using the passphrase of the encryption key
+> gpg --output unencrypted-file1.pdf --decrypt encrypted-file.gpg
+
+
+
